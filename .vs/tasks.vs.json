@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Form1",
+      "appliesTo": "SpaceGame/Form1.cs",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-Form1.Designer",
+      "appliesTo": "SpaceGame/Form1.Designer.cs",
+      "type": "launch"
+    }
+  ]
+}
