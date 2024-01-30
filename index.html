@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            background-image: url('background.jpg'); /* Replace with the path to your background image */
+            background-image: url('path/to/your/image.jpg');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -15,15 +15,16 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: white; /* Set text color to make it visible on the background */
+            color: white;
         }
 
         header, section {
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black overlay for better readability */
-            border-radius: 10px; /* Optional: Add rounded corners to the sections */
-            margin: 10px 0; /* Optional: Add margin between sections */
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin: 10px 0;
             width: 80%; /* Adjust width for larger screens */
+            text-align: center;
         }
 
         header h1 {
@@ -33,56 +34,37 @@
         section#about-me,
         section#projects,
         section#languages {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            width: 100%; /* Full width on small screens */
+            width: 100%;
         }
 
         section#about-me {
-            width: 50vh;
+            height: 50vh;
             padding: 10px;
         }
 
         section#projects,
         section#languages {
             display: flex;
-            flex-direction: column; /* Display sections vertically on small screens */
-            flex-direction: row;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
         }
 
-         section#projects div, 
-         section#languages div {
-            margin-right: 20px;
-            width: 100%; /* Full width on small screens */
+        /* Add margin between project sections */
+        section#projects div,
+        section#languages div {
+            margin-bottom: 20px; /* Add space between sections */
+            width: 100%;
         }
-        
+
         section#projects ul,
-        section#languages ul{
+        section#languages ul {
             list-style: none;
             padding: 0;
         }
 
         section#projects li,
-        section#languages li{
+        section#languages li {
             margin-bottom: 10px;
-        }
-
-        @media (min-width: 600px) {
-            /* Adjust styles for screens wider than 600px */
-            section#projects,
-            section#languages {
-                flex-direction: row; /* Display sections side by side on larger screens */
-            }
-
-            section#projects div,
-            section#languages div {
-                margin-bottom: 0; /* Remove margin between sections on larger screens */
-                margin-right: 20px; /* Add space between sections */
-                width: auto; /* Auto width on larger screens */
-            }
         }
         
     </style>
