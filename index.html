@@ -23,6 +23,7 @@
             background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black overlay for better readability */
             border-radius: 10px; /* Optional: Add rounded corners to the sections */
             margin: 10px 0; /* Optional: Add margin between sections */
+            width: 80%; /* Adjust width for larger screens */
         }
 
         header h1 {
@@ -36,6 +37,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            width: 100%; /* Full width on small screens */
         }
 
         section#about-me {
@@ -46,6 +48,7 @@
         section#projects,
         section#languages {
             display: flex;
+            flex-direction: column; /* Display sections vertically on small screens */
             flex-direction: row;
             justify-content: space-around;
         }
@@ -53,6 +56,7 @@
          section#projects div, 
          section#languages div {
             margin-right: 20px;
+            width: 100%; /* Full width on small screens */
         }
         
         section#projects ul,
@@ -64,6 +68,21 @@
         section#projects li,
         section#languages li{
             margin-bottom: 10px;
+        }
+
+        @media (min-width: 600px) {
+            /* Adjust styles for screens wider than 600px */
+            section#projects,
+            section#languages {
+                flex-direction: row; /* Display sections side by side on larger screens */
+            }
+
+            section#projects div,
+            section#languages div {
+                margin-bottom: 0; /* Remove margin between sections on larger screens */
+                margin-right: 20px; /* Add space between sections */
+                width: auto; /* Auto width on larger screens */
+            }
         }
         
     </style>
