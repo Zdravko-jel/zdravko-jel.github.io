@@ -35,6 +35,7 @@
         section#projects,
         section#languages {
             width: 100%;
+            max-width: 600px;
         }
 
         section#about-me {
@@ -68,10 +69,22 @@
             margin-bottom: 10px;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            body {
+                align-items: stretch; /* Align items to the top for smaller screens */
+            }
+
+            header, section {
+                width: 90%; /* Adjust the width for smaller screens */
+            }
+
+            section#about-me {
+                height: auto; /* Allow the section to adjust its height */
+            }
+
             section#projects div,
             section#languages div {
-                width: 100%;
+                width: 100%; /* Full width on smaller screens */
             }
         }
         
