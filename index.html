@@ -29,10 +29,34 @@
             margin: 0;
         }
 
+        section#about-me,
+        section#projects {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
         section#about-me {
             width: 50vh;
             padding: 10px;
         }
+
+        section#projects {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        section#projects ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        section#projects li {
+            margin-bottom: 10px;
+        }
+        
     </style>
     <title>Zdravko Zhelyazkov</title>
 </head>
@@ -47,13 +71,24 @@
         <p>Hello, I'm Zdravko Zhelyazkov, 22 years old, studying computer systems and technologies in Burgas, Bulgaria. I aspire to grow in programming and information technologies. My skills include various programming languages, and my portfolio focuses on tackling challenging tasks. I'm ready for new opportunities and collaborations.</p>
     </section>
 
-    <section>
-        <h2>My Projects</h2>
-        <ul>
-            <li><a href="https://github.com/Zdravko-jel/zdravko-jel.github.io/tree/main/SpaceJets">Space Jets Game</a></li>
-            <li><a href="#">Project 2</a></li>
-            <!-- Add more projects as needed -->
-        </ul>
+    <section id="projects">
+        <div>
+            <h2>My Projects C#</h2>
+            <ul>
+                <li><a href="https://github.com/Zdravko-jel/zdravko-jel.github.io/tree/main/SpaceJets">Space Jets Game</a></li>
+                <li><a href="#">Project 2</a></li>
+                <!-- Add more projects as needed -->
+            </ul>
+        </div>
+
+        <div>
+            <h2>My Projects Python</h2>
+            <ul>
+                <li><a href="#">Project 3</a></li>
+                <li><a href="#">Project 4</a></li>
+                <!-- Add more projects as needed -->
+            </ul>
+        </div>
     </section>
 
     <section>
