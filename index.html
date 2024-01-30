@@ -30,7 +30,8 @@
         }
 
         section#about-me,
-        section#projects {
+        section#projects,
+        section#languages {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -42,22 +43,26 @@
             padding: 10px;
         }
 
-        section#projects {
+        section#projects,
+        section#languages {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
         }
 
-         section#projects div {
+         section#projects div, 
+         section#languages div {
             margin-right: 20px;
         }
         
-        section#projects ul {
+        section#projects ul,
+        section#languages ul{
             list-style: none;
             padding: 0;
         }
 
-        section#projects li {
+        section#projects li,
+        section#languages li{
             margin-bottom: 10px;
         }
         
@@ -95,6 +100,30 @@
         </div>
     </section>
 
+    <section id="languages">
+        <div>
+            <h2>Programming Languages</h2>
+            <ul>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Java</li>
+                <!-- Add more languages as needed -->
+            </ul>
+        </div>
+
+        <!-- Add more language proficiency sections as needed -->
+
+        <div>
+            <h2>Web Technologies</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>React</li>
+                <!-- Add more web technologies as needed -->
+            </ul>
+        </div>
+    </section>
+    
     <section>
         <h2>Contact</h2>
         <p>Email: 4ap1a7a@gmail.com</p>
