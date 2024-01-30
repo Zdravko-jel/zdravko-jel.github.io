@@ -45,8 +45,8 @@
         section#projects,
         section#languages {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
 
         /* Add margin between project sections */
@@ -54,6 +54,7 @@
         section#languages div {
             margin-bottom: 20px; /* Add space between sections */
             width: 100%;
+            max-width: 400px;
         }
 
         section#projects ul,
