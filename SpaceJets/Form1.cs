@@ -43,6 +43,7 @@ namespace SpaceJets
             InitializeComponent();
         }
 
+        // Getting our window ready
         private void GameWindow_Load(object sender, EventArgs e)
         {
             pause = false;
@@ -160,6 +161,8 @@ namespace SpaceJets
             gameMedia.controls.play();
         }
 
+        // Keeping track of the background timer so that we can
+        // make the particles in the back move
         private void BackgroundMoveTimer_Tick(object sender, EventArgs e)
         {
             for (int i = 0; i < stars.Length / 2; i++)
@@ -183,6 +186,7 @@ namespace SpaceJets
             }
         }
 
+        // Using timers so that we can move our player
         private void LeftMoveTimer_Tick(object sender, EventArgs e)
         {
             if (player.Left > 10)
@@ -215,6 +219,7 @@ namespace SpaceJets
             }
         }
 
+        // Here we start our timers based on that what button we hit
         private void GameWindow_KeyDown(object sender, KeyEventArgs e)
         {
             if (!pause)
@@ -239,6 +244,7 @@ namespace SpaceJets
             
         }
 
+        // Same here but we are stopping them
         private void GameWindow_KeyUp(object sender, KeyEventArgs e)
         {
             RightMoveTimer.Stop();
@@ -270,6 +276,7 @@ namespace SpaceJets
             }
         }
 
+        // We are using this timer so that we can make our munition move
         private void MunitionMoveTimer_Tick(object sender, EventArgs e)
         {
             shootgMedia.controls.play();
@@ -291,11 +298,13 @@ namespace SpaceJets
             }
         }
 
+        // This timer moves our enemies
         private void EnemyMoveTimer_Tick(object sender, EventArgs e)
         {
             MoveEnemy(enemies, enemiesSpeed);
         }
 
+        // Whit this code we are moving the enemy
         private void MoveEnemy(PictureBox[] array, int speed)
         {
             for (int i = 0; i < array.Length; i++)
@@ -310,6 +319,7 @@ namespace SpaceJets
             }
         }
 
+        // This function here checks if we collide with the enemy
         private void Collision()
         {
             for (int i = 0; i < enemies.Length; i++)
@@ -353,6 +363,7 @@ namespace SpaceJets
             }
         }
 
+        // Function for ending the game
         private void GameOver(String str)
         {
             name.Text = str;
@@ -383,6 +394,7 @@ namespace SpaceJets
             EnemyMunitionTimer.Start();
         }
 
+        // Moving the enemy munition using this timer
         private void EnemyMunitionTimer_Tick(object sender, EventArgs e)
         {
             for (int i = 0; i < (EnemyMunition.Length - dificulty); i++)
@@ -403,6 +415,7 @@ namespace SpaceJets
             }
         }
 
+        // Checking for collision with the enemy munition
         private void CollisionWithEnemyMonition()
         {
             for (int i = 0; i < EnemyMunition.Length; i++)
@@ -418,6 +431,7 @@ namespace SpaceJets
             }
         }
 
+        // Button for replaying the game
         private void ReplayBtn_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
@@ -425,6 +439,7 @@ namespace SpaceJets
             GameWindow_Load(e, e);
         }
 
+        // And a button for ending it
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
