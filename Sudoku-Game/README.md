@@ -1,3 +1,5 @@
+# Sudoku GUI Game - With auto solver
+
 I was looking for ideas to add to my developer portfolio and as i was searching i found this one.
 It almost instantly grabbed my attention because i used to play sudoku pretty often when i was a kid.
 
